@@ -10,18 +10,19 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Entity
-@Table(name = "district_user")
+@Table(name = "state_user")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DistrictUser {
+public class StateUser {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)    
 private Long id;
-private String DistrictUserName;
-private String DistrictUserEmail;
-private String DistrictUserProfile;
-private boolean DistrictUserIsActive;
-private List<String> DistrictUserRoles;
+private String StateUserName;
+private String StateUserEmail;
+private String StateUserProfile;
+private boolean StateUserIsActive;
+private List<String> StateUserRoles;
 }

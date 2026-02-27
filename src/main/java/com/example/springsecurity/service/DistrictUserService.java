@@ -12,8 +12,8 @@ import com.example.springsecurity.repository.DistrictUserRepository;
 
 @Service
 public class DistrictUserService {
-   final DistrictUserRepository districtUserRepository;
-   final ModelMapper modelMapper;
+   private final DistrictUserRepository districtUserRepository;
+   private final ModelMapper modelMapper;
 
     public DistrictUserService(DistrictUserRepository districtUserRepository, ModelMapper modelMapper) {
         this.districtUserRepository = districtUserRepository;

@@ -14,6 +14,6 @@ private Long id;
 private String DistrictUserName;
 private String DistrictUserEmail;
 private String DistrictUserProfile;
-private boolean DistrictUSerisActive;
+private boolean DistrictUserIsActive;
 private List<String> DistrictUserRoles;
 }
