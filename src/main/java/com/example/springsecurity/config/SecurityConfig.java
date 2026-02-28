@@ -22,12 +22,21 @@ public class SecurityConfig {
 
         // for basic authentication
 
+        // http
+        //         .csrf(csrf -> csrf.disable())
+        //         .authorizeHttpRequests(auth -> auth
+        //                 .anyRequest().authenticated()
+        //         )
+        //         .httpBasic(Customizer.withDefaults());
+
+        // for form based on role authentication
         http
-                .csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(auth -> auth
-                        .anyRequest().authenticated()
-                )
-                .httpBasic(Customizer.withDefaults());
+         .authorizeHttpRequests(auth->auth
+                .requestMatchers("/district/all").permitAll()
+                .requestMatchers("/admin/**").authenticated()
+               
+         )
+         .httpBasic(Customizer.withDefaults());
 
         return http.build();
     }
